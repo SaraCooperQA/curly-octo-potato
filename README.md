@@ -1,18 +1,20 @@
 
-## A solution provided for Task 2 of the Trivago QA Case Study
+## Solution of Challenge 2 for Trivago Marketing QA Engineer position
 
 
-Challenge 2: 
-Given that you are the QA engineer for trivago Magazine and you've to decide on 3 test  scenarios that should only be executed manually. Please specify the scenarios and the  reason behind choosing them. 
-Task II: Test Automation
+
+**Task II: Test Automation**
 
 Design a test automation framework for room5.trivago.com that will allow other QA Engineers to  be able to create test cases efficiently. 
+
 Please cover the following scenarios: 
+**
 • Search for any location on Magazine by using the search bar 
 • Fill in the contact form and send it (accessible through the footer) 
 • Subscribe to the Newsletter 
 • Navigate to a destination through the menu on the top left 
 • Verify that the links in homepage are working 
+**
 
 Bonus Scenario (Optional) :  
 1- Click on Read more button in the Hero Image (hint : class="hero-button" ) 2- Open the browser console 
@@ -23,6 +25,8 @@ Bonus Scenario (Optional) :
 • “OneTrustGroupsUpdated” 
 Check every event will include these 4 parameters inside : “C0001,C0003,C0002,C0004" Check “contentLoaded” event is fired then inside the event check the hotelIds is not  empty and the target-properties has the same path in the URL :  
 https://magazine.trivago.com/affordable-christmas-vacations-for-families/ 
+
+
 
 I have selected Cypress to automate these scenarios because of the cross browser support, CI/CD integration and built-in waiting mechanism making it the ideal choice for web automation. 
 
