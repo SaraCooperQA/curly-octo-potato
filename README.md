@@ -55,6 +55,49 @@ I would chose automation in order to perform Regression testing. A good practice
 or
 - npx cypress run (automated execution)
 
+## Automated Reports:
+
+Magazine Regression
+    ✓ Test 1 - Search for any location on Magazine by using the search bar  (4930ms)
+    ✓ Test 2 - Fill in the contact form and send it (accessible through the footer) (9768ms)
+    ✓ Test 3 - Subscribe to the Newsletter (3257ms)
+    ✓ Test 4 - Navigate to a destination through the menu on the top left (5530ms)
+    ✓ Test 5 - Checking all the links on the homepage are working (13216ms)
+
+
+  5 passing (37s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        5                                                                                │
+  │ Passing:      5                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     36 seconds                                                                       │
+  │ Spec Ran:     trivago.js                                                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  trivago.js                               00:36        5        5        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:36        5        5        -        -        -  
+
+
+
+## CI Integration with GitHub actions
+
 
 ### Author
 Mujtaba Mehdi,
