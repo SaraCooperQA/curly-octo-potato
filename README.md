@@ -2,13 +2,14 @@
 ## Solution of Challenge 2 for Trivago Marketing QA Engineer position [![Chrome Passing](https://github.com/cypress-io/github-action/workflows/example-chrome/badge.svg?branch=master)](.github/workflows/main.yml)
 
 ## Solution Video:
+https://user-images.githubusercontent.com/14287838/109374025-3f941000-78d4-11eb-902a-47141670279e.mp4
 
-https://user-images.githubusercontent.com/14287838/109370100-b8896c80-78c0-11eb-833e-7d162eb1c896.mp4
+## **Task II: Test Automation (Bonus completed)**
+
+Design a test automation framework for magazine
 
 
-**Task II: Test Automation**
-
-Design a test automation framework for room5.trivago.com that will allow other QA Engineers to  be able to create test cases efficiently. 
+.trivago.com that will allow other QA Engineers to  be able to create test cases efficiently. 
 
 **Please cover the following scenarios:**
 
@@ -18,7 +19,20 @@ Design a test automation framework for room5.trivago.com that will allow other Q
 - Navigate to a destination through the menu on the top left *Done*
 - Verify that the links in homepage are working *Done*
 
-Gherkin Test Cases:
+**Bonus Scenario (Optional):** *Done*
+
+- Click on Read more button in the Hero Image (hint : class="hero-button" )
+- Open the browser console
+- Access the dataLayer of the browser
+- Check the below events are fired :
+  - “OneTrustLoaded”
+  - “OptanonLoaded”
+  - “OneTrustGroupsUpdated”
+- Check every event will include these 4 parameters inside : “C0001,C0003,C0002,C0004"
+- Check “contentLoaded” event is fired then inside the event 
+- Check the hotelIds is not empty and the target-properties has the same path in the URL 
+
+**Gherkin Test Cases:**
 
 1. Given I land on homepage
    When I click on the search icon
@@ -47,6 +61,13 @@ Gherkin Test Cases:
 5. Given I land on homepage
    And I verify all the links status code is 200
    Then I see that all the links are working fine
+   
+6. Given I land on homepage
+   When I click on the read more button under hero image
+   Then I can verify the events "OneTrustLoaded", "OptanonLoaded", "OneTrustGroupsUpdated" and "contentLoaded" are fired
+   And "contentLoaded" event has non-empty hotelIds
+   And  target-properties and URL has the same path
+
 
 I have selected Cypress to automate these scenarios because of the cross browser support, CI/CD integration and built-in waiting mechanism making it the ideal choice for web automation. 
 
@@ -69,12 +90,13 @@ or
 
 ## Pros of using Cypress:
 - Automated Reports
-![image](https://user-images.githubusercontent.com/14287838/109370915-2edb9e00-78c4-11eb-84f0-28c90f62cc93.png)
+![image](https://user-images.githubusercontent.com/14287838/109373903-6f8ee380-78d3-11eb-9427-c29ad70c326c.png)
 - CI Integration with GitHub actions
 - Parallel execution using CI tools and cross browser and platform support
 - Built-in waiting mechanism
 - API testing
 - Stable tests
+- Easier interaction with Data Layer using Window
 
 ## Cons of using Cypress:
 
