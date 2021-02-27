@@ -1,22 +1,25 @@
 
 ## Solution of Challenge 2 for Trivago Marketing QA Engineer position
 
+## Solution Video:
+
+https://user-images.githubusercontent.com/14287838/109370100-b8896c80-78c0-11eb-833e-7d162eb1c896.mp4
 
 
 **Task II: Test Automation**
 
 Design a test automation framework for room5.trivago.com that will allow other QA Engineers to  be able to create test cases efficiently. 
 
-**Please cover the following scenarios: **
+**Please cover the following scenarios:**
 
-- Search for any location on Magazine by using the search bar 
-- Fill in the contact form and send it (accessible through the footer) 
-- Subscribe to the Newsletter 
-- Navigate to a destination through the menu on the top left 
-- Verify that the links in homepage are working 
+- Search for any location on Magazine by using the search bar *Done*
+- Fill in the contact form and send it (accessible through the footer) *Done*
+- Subscribe to the Newsletter *Done*
+- Navigate to a destination through the menu on the top left *Done*
+- Verify that the links in homepage are working *Done*
 
 
-**Bonus Scenario (Optional):** 
+**Bonus Scenario (Optional):**  *Not Done*
  
 1- Click on Read more button in the Hero Image (hint : class="hero-button" ) 2- Open the browser console 
 3- Access the dataLayer of the browser 
@@ -35,23 +38,6 @@ I have selected Cypress to automate these scenarios because of the cross browser
 I would chose automation in order to perform Regression testing. A good practice is to have two different suites: a very fast regression test that can be executed on every deploy of a development branch, and a more robust regression testing suite that can be executed periodically (like overnight or only before release). 
 
 # Steps to setup Cypress:
-
-```
-npm install cypress --save-dev
-
-# If you used npm to install, Cypress has now been installed to your ./node_modules directory, with its binary executable accessible from ./node_modules/.bin.
-
-# Now you can open Cypress from your project root one of the following ways:
-# The long way with the full path
-
-./node_modules/.bin/cypress open
-
-```
-
-## Writing the first spec
-Follow the below guide to create your first test case to start understanding the basic directory structure and syntax of Cypress from [here](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Write-your-first-test)
-
-
 
 ## Short Steps:
 - Clone this Repository and cd to the repository directory
