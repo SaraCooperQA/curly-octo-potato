@@ -113,4 +113,41 @@ context('Magazine Regression', () => {
         })
     })
 
+    it('Test 6 - Verifying the GTM events fired in the browser console', () => {
+
+        // Clicks on the read more button under hero image
+        cy.get("div[class='hero-button']", { timeout: 15000 }).click();
+        
+        cy.window().then((win) => {
+            //storing the path from the event contentLoaded
+            const path = win.dataLayer[12]["target-properties"];
+
+            //verifying the data layer is defined
+            assert.isDefined(win.dataLayer, 'Data Layer is defined');
+
+            //verifying the OneTrustLoaded event is fired and parameters C0001,C0003,C0002,C0004 are present in the event
+            assert.equal(win.dataLayer[0].event, "OneTrustLoaded", 'OneTrustLoaded event is fired');
+            assert.include(win.dataLayer[0].OnetrustActiveGroups, "C0001,C0003,C0002,C0004", 'Parameters C0001,C0003,C0002,C0004 are present for OnetrustLoaded event');
+
+            //verifying the OptanonLoaded event is fired and parameters C0001,C0003,C0002,C0004 are present in the event
+            assert.equal(win.dataLayer[1].event, "OptanonLoaded", 'OptanonLoaded event is fired');
+            assert.include(win.dataLayer[1].OptanonActiveGroups, "C0001,C0003,C0002,C0004", 'Parameters C0001,C0003,C0002,C0004 are present for OptanonLoaded event');
+
+            //verifying the OneTrustGroupsUpdated event is fired and parameters C0001,C0003,C0002,C0004 are present in the event
+            assert.equal(win.dataLayer[2].event, "OneTrustGroupsUpdated", 'OneTrustGroupsUpdated event is fired');
+            assert.include(win.dataLayer[2].OnetrustActiveGroups, "C0001,C0003,C0002,C0004", 'Parameters C0001,C0003,C0002,C0004 are present for OnetrustGroupsUpdated event');
+
+            //verifying the contentLoaded event is fired and hotelIds are not empty for it
+            assert.equal(win.dataLayer[12].event, "contentLoaded", 'contentLoaded event is fired');
+            assert.isNotEmpty(win.dataLayer[12].hotelIds, 'hotelIds is not empty for event contentLoaded');
+
+            //verifying that the target-properties has the same path in the URL
+            cy.url().then(($url) => {
+                assert.include($url,path,"target-properties has the same path in the URL");
+            })
+
+        });
+    })
+
+
 })
