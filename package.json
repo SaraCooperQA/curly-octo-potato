@@ -1,0 +1,26 @@
+{
+  "name": "curly-octo-potato",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mujjazi/curly-octo-potato.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mujjazi/curly-octo-potato/issues"
+  },
+  "homepage": "https://github.com/mujjazi/curly-octo-potato#readme",
+  "devDependencies": {
+    "cypress": "^6.5.0",
+    "cypress-xpath": "^1.6.2"
+  },
+  "dependencies": {
+    "faker": "^5.4.0"
+  }
+}
