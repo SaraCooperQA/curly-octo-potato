@@ -55,7 +55,7 @@ I would chose automation in order to perform Regression testing. A good practice
 or
 - npx cypress run (automated execution)
 
-## Pros os using Cypress:
+## Pros of using Cypress:
 - Automated Reports
 ![image](https://user-images.githubusercontent.com/14287838/109370915-2edb9e00-78c4-11eb-84f0-28c90f62cc93.png)
 - CI Integration with GitHub actions
