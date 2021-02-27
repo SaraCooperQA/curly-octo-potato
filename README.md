@@ -1,5 +1,5 @@
 
-## Solution of Challenge 2 for Trivago Marketing QA Engineer position
+## Solution of Challenge 2 for Trivago Marketing QA Engineer position [![Chrome Passing](https://github.com/cypress-io/github-action/workflows/example-chrome/badge.svg?branch=master)](.github/workflows/main.yml)
 
 ## Solution Video:
 
