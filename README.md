@@ -18,24 +18,37 @@ Design a test automation framework for room5.trivago.com that will allow other Q
 - Navigate to a destination through the menu on the top left *Done*
 - Verify that the links in homepage are working *Done*
 
+Gherkin Test Cases:
 
-**Bonus Scenario (Optional):**  *Not Done*
- 
-1- Click on Read more button in the Hero Image (hint : class="hero-button" ) 2- Open the browser console 
-3- Access the dataLayer of the browser 
-4- Check the below events are fired : 
-• “OneTrustLoaded” 
-• “OptanonLoaded” 
-• “OneTrustGroupsUpdated” 
-
-Check every event will include these 4 parameters inside : “C0001,C0003,C0002,C0004" Check “contentLoaded” event is fired then inside the event check the hotelIds is not  empty and the target-properties has the same path in the URL :  
-https://magazine.trivago.com/affordable-christmas-vacations-for-families/ 
-
-
+1. Given I land on homepage
+   When I click on the search icon
+   And I enter the location Dusseldorf
+   Then I see the relevant articles for that location
+   
+2. Given I land on homepage
+   When I scroll to the footer view
+   And I click on the contact form
+   And I fill the form with name, email and message
+   Then I see the success message for form submission
+   
+3. Given I land on homepage
+   When I scroll to the newsletter view
+   And I enter the email address for newsletter subscription
+   And I click on the Inspire me button
+   Then I see the "You are now checked-in!" message
+   
+4. Given I land on homepage
+   When I click on the top left menu
+   And I select the destinations
+   And I select Midwest category
+   And I select the Michigan state
+   Then I see the Michigan page for destinations
+   
+5. Given I land on homepage
+   And I verify all the links status code is 200
+   Then I see that all the links are working fine
 
 I have selected Cypress to automate these scenarios because of the cross browser support, CI/CD integration and built-in waiting mechanism making it the ideal choice for web automation. 
-
-I would chose automation in order to perform Regression testing. A good practice is to have two different suites: a very fast regression test that can be executed on every deploy of a development branch, and a more robust regression testing suite that can be executed periodically (like overnight or only before release). 
 
 # Steps to setup Cypress:
 
@@ -49,7 +62,6 @@ I would chose automation in order to perform Regression testing. A good practice
 
 - git clone https://github.com/mujjazi/curly-octo-potato.git
 - cd .\curly-octo-potato\
-- npm init
 - npm install cypress --save-dev
 - npx cypress open (manual execution)
 or
