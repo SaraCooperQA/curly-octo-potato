@@ -1,15 +1,11 @@
 
-## Solution of Challenge 2 for Trivago Marketing QA Engineer position [![Chrome Passing](https://github.com/cypress-io/github-action/workflows/example-chrome/badge.svg?branch=master)](.github/workflows/main.yml)
+## Cypress Automation framework for a Web Application [![Chrome Passing](https://github.com/cypress-io/github-action/workflows/example-chrome/badge.svg?branch=master)](.github/workflows/main.yml)
 
 ## Solution Video:
 https://user-images.githubusercontent.com/14287838/109374025-3f941000-78d4-11eb-902a-47141670279e.mp4
 
-## **Task II: Test Automation (Bonus completed)**
 
-Design a test automation framework for magazine
-
-
-.trivago.com that will allow other QA Engineers to  be able to create test cases efficiently. 
+**Design a test automation framework for magazine.trivago.com that will allow other QA Engineers to  be able to create test cases efficiently**
 
 **Please cover the following scenarios:**
 
