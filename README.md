@@ -1,6 +1,8 @@
 
 ## Cypress Automation framework for a Web Application [![Chrome Passing](https://github.com/cypress-io/github-action/workflows/example-chrome/badge.svg?branch=master)](.github/workflows/main.yml)
 
+### This repository is for the solution of the QA Engineer position at trivago for which I was eventually offered the position and I joined trivago for an year after this.
+
 ## Solution Video:
 https://user-images.githubusercontent.com/14287838/109374025-3f941000-78d4-11eb-902a-47141670279e.mp4
 
